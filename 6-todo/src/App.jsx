@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Todo from './components/Todo';
+import TodoForm from './components/TodoForm';
 
 
 
@@ -12,9 +13,13 @@ function App() {
       <h1>Lista de Tarefas</h1>
       <div className='todo-list'>
         {todos.map((todoElem) => (
-          <Todo key={todoElem.id} todo={todoElem} />
+          <Todo key={todoElem.id} todo={todoElem} />          
         ))}
       </div>
+      <div>
+      <TodoForm/>
+      </div>
+      
     </div>
   );
 }
