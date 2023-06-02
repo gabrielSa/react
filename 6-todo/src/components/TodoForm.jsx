@@ -7,13 +7,15 @@ function TodoForm({addTodo}) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(!value || !category) return;
+
         addTodo(value, category);
         setCategory("");
         setValue("");
     }
 
     return (
-        <div>
+        <div className="todo-form">
 
             <h2>Criar nova tarefa:</h2>
             <form onSubmit={handleSubmit}>

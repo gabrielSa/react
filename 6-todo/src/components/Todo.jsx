@@ -3,7 +3,7 @@ import React from "react";
 function Todo({todo}) {
 
     return(
-        <div>
+        <div className="todo">
 
             <div className="content">
                 <p>{todo.text}</p>
@@ -11,8 +11,8 @@ function Todo({todo}) {
             </div>
 
             <div className = "buttons">
-                <button>Completar</button>
-                <button>x</button>
+                <button className="complete">Completar</button>
+                <button className="remove">x</button>
             </div>
 
         </div>
