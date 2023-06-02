@@ -8,18 +8,31 @@ import TodoForm from './components/TodoForm';
 function App() {
   const [todos, setTodos] = useState(todoInitArray);
 
+  const addTodo = (text, category) => {
+    const newTodos = [
+      ...todos,
+      {
+      id: Math.floor(Math.random*10000),
+      text: text,
+      category: category,
+      isCompleted: false,
+    },
+  ];
+    setTodos(newTodos);
+  }
+
   return (
     <div className="App">
       <h1>Lista de Tarefas</h1>
       <div className='todo-list'>
         {todos.map((todoElem) => (
-          <Todo key={todoElem.id} todo={todoElem} />          
+          <Todo key={todoElem.id} todo={todoElem} />
         ))}
       </div>
       <div>
-      <TodoForm/>
+        <TodoForm addTodo={addTodo}/>
       </div>
-      
+
     </div>
   );
 }
