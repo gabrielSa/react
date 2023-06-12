@@ -1,5 +1,5 @@
 import './App.css';
-import {Outlet} from "react-router-dom"
+import {Outlet} from "react-router-dom";
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <p>Navbar</p>
       <h1>React Router</h1>
       <Outlet/>
-      <p>Footer</p>      
+      <p>Footer</p>     
     </div>
   );
 }
