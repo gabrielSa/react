@@ -1,17 +1,17 @@
 import './App.css';
 import {Outlet} from "react-router-dom";
 import Navbar from './layout/Navbar';
+import Footer from './layout/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Navbar/>
-      <h1>React Router</h1>
       <div className='container min-height'>
-      <Outlet/>
+      <Outlet/>      
       </div>
-      <p>Footer</p>     
-    </div>
+      <Footer/>
+    </>
   );
 }
 
