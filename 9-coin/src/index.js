@@ -6,10 +6,10 @@ import reportWebVitals from './reportWebVitals';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import Home from './pages/Home';
-import Contacts from './pages/Contacts';
-import Company from './pages/Company';
-import NewProjects from './pages/NewProjects';
+import Home from './components/pages/Home';
+import Contacts from './components/pages/Contacts';
+import Company from './components/pages/Company';
+import NewProjects from './components/pages/NewProjects';
 
 const router = createBrowserRouter([
   {
